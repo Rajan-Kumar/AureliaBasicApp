@@ -1,0 +1,35 @@
+﻿<template>
+    
+    <!--<nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Movies!</a>
+            </div>
+        </div>
+    </nav>-->
+    
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <th>Year</th>
+                <td></td>
+            </tr>
+            <tr repeat.for="movie of movies">
+                <th>${movie.title}</th>
+                <th>${movie.releaseYear}</th>
+                <td>
+                    <a route-href="route:details;params.bind:{id:movie.id}" 
+                       class="btn btn-default">
+                        Details
+                    </a>
+                    <a route-href="route:edit;params.bind:{id:movie.id}"
+                       class="btn btn-default">
+                        Edit
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--<compose view-model="currentDate"></compose>-->
+</template>
